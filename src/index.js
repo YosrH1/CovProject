@@ -4,11 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
+function Main() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default Main;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );
 
